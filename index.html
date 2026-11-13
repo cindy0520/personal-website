@@ -377,23 +377,30 @@
     }
 
     .robot-btn {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #0f172a;
+      width: auto;
+      height: auto;
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      background: transparent;
       cursor: pointer;
-      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+      box-shadow: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.22s, box-shadow 0.22s;
+      transition: transform 0.22s;
+    }
+
+    .robot-btn img {
+      width: 90px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
     }
 
     .robot-btn:hover {
       transform: scale(1.07);
-      box-shadow: 0 16px 36px rgba(56, 189, 248, 0.55);
     }
 
     .chat-window {
@@ -440,14 +447,20 @@
     }
 
     .chat-bot-avatar {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: transparent;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #0f172a;
+    }
+
+    .chat-bot-avatar img {
+      width: 44px;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .chat-title {
@@ -820,17 +833,7 @@
   <div class="chat-launcher">
     <div class="chat-tooltip" id="chatTooltip">嗨！有問題可以問我喔 🤖</div>
     <button class="robot-btn" id="robotToggleBtn" aria-label="開啟 AI 小客服">
-      <!-- Robot SVG Icon -->
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="8" width="18" height="12" rx="4"></rect>
-        <path d="M12 2v6"></path>
-        <circle cx="12" cy="2" r="1.2" fill="currentColor"></circle>
-        <circle cx="8.5" cy="13.5" r="1.3" fill="currentColor"></circle>
-        <circle cx="15.5" cy="13.5" r="1.3" fill="currentColor"></circle>
-        <path d="M9 17h6"></path>
-        <path d="M1 13h2"></path>
-        <path d="M21 13h2"></path>
-      </svg>
+      <img src="./mascot.gif" alt="彩虹飛馬 AI 小客服" />
     </button>
   </div>
 
@@ -838,13 +841,7 @@
     <div class="chat-header">
       <div class="chat-header-info">
         <div class="chat-bot-avatar">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="8" width="18" height="12" rx="4"></rect>
-            <path d="M12 2v6"></path>
-            <circle cx="8.5" cy="13.5" r="1.2" fill="currentColor"></circle>
-            <circle cx="15.5" cy="13.5" r="1.2" fill="currentColor"></circle>
-            <path d="M9 17h6"></path>
-          </svg>
+          <img src="./mascot.gif" alt="彩虹飛馬 AI 小客服" />
         </div>
         <div>
           <div class="chat-title">AI 小客服機器人</div>
